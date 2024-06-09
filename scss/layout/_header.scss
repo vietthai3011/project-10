@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .header {
     margin-top: 40px;
 
@@ -5,44 +7,86 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include abstracts.screen(md) {
+            justify-content: initial;
+        }
     }
 }
 
 .navbar {
+    @include abstracts.screen(md) {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 50%;
+        z-index: 1;
+
+        padding: 40px;
+        border-radius: 0px 20px 20px 0px;
+        background-color: #444444;
+
+        &.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
     &__list {
         display: flex;
         align-items: center;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__item {
-        position: relative;
-
-        line-height: 150%;
-
-        &::before {
-            content: "";
-
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-
-            display: block;
-            width: 0;
-            height: 2px;
-            background: #6aea5c;
-            border-radius: 50%;
-
-            transition: width 0.3s;
-        }
-
-        &:hover::before {
-            width: 100%;
+        @include abstracts.screen(md) {
+            & + & {
+                margin-top: 20px;
+            }
         }
     }
 
     &__link {
         color: var(--text-color-second);
         padding: 18px;
+
+        line-height: 150%;
+
+        @include abstracts.screen(md) {
+            color: var(--text-color-primary);
+            font-size: 2rem;
+
+            padding: 24px;
+        }
+
+        &--hover {
+            position: relative;
+        }
+
+        &--hover::before {
+            content: "";
+
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+
+            display: block;
+            width: 0;
+            height: 3px;
+            background: #6aea5c;
+            border-radius: 6px;
+
+            transition: width 0.2s;
+        }
+
+        &--hover:hover::before {
+            width: 100%;
+        }
 
         &:hover {
             color: var(--text-color-primary);
@@ -56,11 +100,37 @@
 
     padding: 8px 27px;
 
-    background: var(--Primary-color-leniar-color, linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%));
+    background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     border-radius: 8px;
     border: 1px solid var(--Text-Color-dark-blue, #272633);
+
+    @include abstracts.screen(md) {
+        margin-left: auto;
+    }
+}
+
+.top-bar__more {
+    margin-left: 44px;
+}
+
+.close-btn {
+    width: 24px;
+    height: 24px;
+
+    margin: 0 0 40px 20px;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba($color: #000, $alpha: 0.2);
+    filter: blur(10px);
+
+    opacity: 0;
+    visibility: hidden;
+    display: none;
 }

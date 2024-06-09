@@ -21,6 +21,9 @@
 
         <!-- *** Font -->
         <link rel="stylesheet" href="./assets/font/stylesheet.css" />
+
+        <!-- *** Script -->
+        <script src="./assets/js/script.js"></script>
     </head>
     <body>
         <header class="header">
@@ -30,16 +33,49 @@
                         <img src="./assets/img/logo.svg" alt="" class="logo__img" />
                     </div>
 
-                    <nav class="navbar">
+                    <nav id="navbar" class="navbar hide">
+                        <div class="close-btn d-none d-md-block">
+                            <img src="./assets/icon/arrow-left.svg" alt="" />
+                        </div>
                         <ul class="navbar__list">
-                            <li class="navbar__item"><a class="navbar__link" href="#!">Home</a></li>
-                            <li class="navbar__item"><a class="navbar__link" href="#!">Products</a></li>
-                            <li class="navbar__item"><a class="navbar__link" href="#!">Guidlines</a></li>
-                            <li class="navbar__item"><a class="navbar__link" href="#!">Review</a></li>
+                            <li class="navbar__item">
+                                <a class="navbar__link" href="#!">
+                                    <span class="navbar__link--hover">Home</span>
+                                </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a class="navbar__link" href="#!">
+                                    <span class="navbar__link--hover">Products</span>
+                                </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a class="navbar__link" href="#!">
+                                    <span class="navbar__link--hover">Guidlines</span>
+                                </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a class="navbar__link" href="#!">
+                                    <span class="navbar__link--hover">Review</span>
+                                </a>
+                            </li>
                         </ul>
                     </nav>
 
-                    <a href="#!" class="sign-in">Sign In</a>
+                    <a href="#!" class="sign-in btn btn--animation"
+                        >Sign In
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+
+                    <!-- *** More -->
+                    <button class="top-bar__more d-none d-md-block js-toggle" toggle-target="#navbar">
+                        <img src="./assets/icon/more.svg" alt="" />
+                    </button>
+
+                    <!-- *** Overlay -->
+                    <div class="overlay js-toggle" toggle-target="#navbar"></div>
                 </div>
             </div>
         </header>
