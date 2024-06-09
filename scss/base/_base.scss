@@ -1,4 +1,11 @@
-* {
+:root {
+    --text-color-primary: #f9f9f9;
+    --text-color-second: #858b93;
+}
+
+*,
+::after,
+::before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -9,10 +16,6 @@ html {
 }
 
 body {
-    width: 1140px;
-    margin-left: auto;
-    margin-right: auto;
-
     font-size: 1.6rem;
     font-family: "sora", sans-serif;
 

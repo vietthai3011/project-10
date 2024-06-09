@@ -1,2 +1,5 @@
-@use "./reset.scss";
-@use "./style.scss";
+@use "./base";
+@use "./components";
+@use "./vendo";
+@use "./abstracts";
+@use "./layout";
