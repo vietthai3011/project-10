@@ -1,6 +1,8 @@
+@use "../abstracts";
+
 :root {
     --text-color-primary: #f9f9f9;
-    --text-color-second: #858b93;
+    --text-color-secondary: #858b93;
 }
 
 *,
@@ -26,4 +28,52 @@ body {
 button {
     background-color: transparent;
     border: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+mark {
+    background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heading-lv1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 7rem; /* 116.667% */
+
+    @include abstracts.screen(lg) {
+        color: #f9f9f9;
+        font-size: 4rem;
+        font-weight: 600;
+    }
+
+    @include abstracts.screen(md) {
+        color: #f9f9f9;
+        font-size: 3rem;
+        font-weight: 600;
+    }
+}
+
+.heading-lv2 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.heading-lv3 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 3.2rem; /* 145.455% */
+
+    @include abstracts.screen(md) {
+        font-style: 2rem;
+    }
+}
+
+.desc--primary {
+    color: var(--text-color-secondary);
+    font-size: 1.6rem;
+    line-height: 2.6rem; /* 162.5% */
 }

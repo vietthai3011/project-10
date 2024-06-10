@@ -1,0 +1,79 @@
+@use "../abstracts";
+
+.service {
+    margin-bottom: 10000px;
+
+    &__wrap {
+        position: relative;
+
+        background-color: #282c30;
+
+        padding: 50px;
+        border-radius: 27px;
+
+        @include abstracts.screen(md) {
+            background-color: #1c1f22;
+            padding: 56px 0;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-icon__wrap {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 62px;
+        height: 62px;
+
+        border-radius: 50%;
+        margin-bottom: 30px;
+        background-color: var(--bgc-service-icon);
+    }
+
+    &__desc {
+        width: 235px;
+        text-align: center;
+
+        margin-top: 5px;
+    }
+}
+
+.separate {
+    position: absolute;
+
+    width: 194.5px;
+    height: 1px;
+
+    background-image: url(../icon/separate.svg);
+
+    &:nth-of-type(1) {
+        top: 82px;
+        left: 348px;
+    }
+
+    &:nth-of-type(2) {
+        top: 82px;
+        right: 348px;
+    }
+
+    &-md {
+        width: 194.5px;
+        height: 1px;
+        margin: 40px auto;
+
+        background-image: url(../icon/separate.svg);
+
+        @include abstracts.screen(sm) {
+            margin-top: 28px;
+            margin-bottom: 28px;
+        }
+    }
+}

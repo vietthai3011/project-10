@@ -21,22 +21,19 @@
 
         <!-- *** Font -->
         <link rel="stylesheet" href="./assets/font/stylesheet.css" />
-
-        <!-- *** Script -->
-        <script src="./assets/js/script.js"></script>
     </head>
     <body>
         <header class="header">
             <div class="container">
-                <div class="header-inner">
+                <div class="top-bar">
                     <div class="logo">
                         <img src="./assets/img/logo.svg" alt="" class="logo__img" />
                     </div>
 
                     <nav id="navbar" class="navbar hide">
-                        <div class="close-btn d-none d-md-block">
+                        <button class="close-btn d-none d-md-block js-toggle" toggle-target="#navbar">
                             <img src="./assets/icon/arrow-left.svg" alt="" />
-                        </div>
+                        </button>
                         <ul class="navbar__list">
                             <li class="navbar__item">
                                 <a class="navbar__link" href="#!">
@@ -77,7 +74,112 @@
                     <!-- *** Overlay -->
                     <div class="overlay js-toggle" toggle-target="#navbar"></div>
                 </div>
+
+                <!-- *** Hero -->
+                <div class="hero">
+                    <div class="hero__content">
+                        <div class="hero__img-left">
+                            <picture>
+                                <source
+                                    media="(max-width: 767.98px)"
+                                    srcset="./assets/icon/eclipse-small-horizontal.svg"
+                                />
+                                <img src="./assets/icon/eclipse-large.svg" alt="" />
+                            </picture>
+                        </div>
+                        <div class="hero__wrap">
+                            <h1 class="heading-lv1 hero__heading">
+                                Make
+                                <mark class="hero__mark"
+                                    >Management
+
+                                    <span class="hero__dot hero__dot-one"></span>
+                                    <span class="hero__dot hero__dot-two"></span>
+                                    <span class="hero__dot hero__dot-three"></span>
+                                    <span class="hero__dot hero__dot-four"></span>
+                                </mark>
+                                Way More Easier Than Ever
+                            </h1>
+                            <p class="desc--primary hero__desc d-md-none">
+                                The online collaborative management platform to bring more efficiency and
+                                performace
+                            </p>
+                            <div class="hero-btn">
+                                <button class="btn btn--primary btn--round">Request Demo</button>
+                                <button class="btn btn--secondary btn--round">Contact Us</button>
+                            </div>
+                        </div>
+                        <div class="hero__img-right">
+                            <picture>
+                                <source
+                                    media="(max-width: 767.98px)"
+                                    srcset="./assets/icon/eclipse-small-vertical.svg"
+                                />
+                                <img src="./assets/icon/eclipse-large.svg" alt="" />
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="hero__media">
+                        <img src="./assets/img/hero-media.png" alt="" class="hero__img" />
+                    </div>
+                </div>
             </div>
         </header>
+
+        <main>
+            <section class="service">
+                <div class="container">
+                    <div class="service__wrap">
+                        <div class="separate d-md-none"></div>
+                        <div class="separate d-md-none"></div>
+
+                        <div class="row row-cols-3 row-cols-lg-2 row-cols-md-1 gy-lg-4 gy-md-0">
+                            <div class="col">
+                                <article class="service__item">
+                                    <div class="service-icon__wrap" style="--bgc-service-icon: #0cce84">
+                                        <img src="./assets/icon/report.svg" alt="" />
+                                    </div>
+                                    <h2 class="service__heading heading-lv3">Structured Reports</h2>
+                                    <p class="service__desc desc--primary">
+                                        Sed rhoncus sit sed tellus donec lorem lectus nunc, ornare
+                                    </p>
+                                </article>
+                            </div>
+
+                            <div class="col separate-md d-none d-md-block"></div>
+
+                            <div class="col">
+                                <div class="service__item">
+                                    <div class="service-icon__wrap" style="--bgc-service-icon: #ef8f00">
+                                        <img src="./assets/icon/clound.svg" alt="" />
+                                    </div>
+                                    <h2 class="service__heading heading-lv3">Cloud System</h2>
+                                    <p class="service__desc desc--primary">
+                                        Sed rhoncus sit sed tellus donec lorem lectus nunc, ornare
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col separate-md d-none d-md-block"></div>
+
+                            <div class="col col-lg-12">
+                                <div class="service__item">
+                                    <div class="service-icon__wrap" style="--bgc-service-icon: #ae8ff9">
+                                        <img src="./assets/icon/support.svg" alt="" />
+                                    </div>
+                                    <h2 class="service__heading heading-lv3">24/7 Support</h2>
+                                    <p class="service__desc desc--primary">
+                                        Sed rhoncus sit sed tellus donec lorem lectus nunc, ornare
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- *** Script -->
+        <script src="./assets/js/script.js"></script>
     </body>
 </html>

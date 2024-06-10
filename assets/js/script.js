@@ -1,11 +1,5 @@
-/**
- * JS toggle
- *
- * Cách dùng:
- * <button class="js-toggle" toggle-target="#box">Click</button>
- * <div id="box">Content show/hide</div>
- */
-window.addEventListener("template-loaded", initJsToggle);
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
 
 function initJsToggle() {
     $$(".js-toggle").forEach((button) => {
@@ -13,7 +7,9 @@ function initJsToggle() {
         if (!target) {
             document.body.innerText = `Cần thêm toggle-target cho: ${button.outerHTML}`;
         }
-        button.onclick = () => {
+        button.onclick = (e) => {
+            e.preventDefault();
+
             if (!$(target)) {
                 return (document.body.innerText = `Không tìm thấy phần tử "${target}"`);
             }
@@ -24,5 +20,17 @@ function initJsToggle() {
                 $(target).classList.toggle("show", isHidden);
             });
         };
+        document.onclick = function (e) {
+            if (!e.target.closest(target)) {
+                const isHidden = $(target).classList.contains("hide");
+                if (!isHidden) {
+                    button.click();
+                }
+            }
+        };
     });
 }
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    initJsToggle();
+});

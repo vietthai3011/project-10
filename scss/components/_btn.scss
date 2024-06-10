@@ -1,5 +1,14 @@
+@use "../abstracts";
+
 .btn {
+    width: 110px;
+    height: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     transition: box-shadow 0.2s;
+    line-height: 2.6rem; /* 162.5% */
+
+    border-radius: 8px;
 
     &:hover {
         box-shadow: rgba(204, 121, 121, 0.12) 0px 2px 4px 0px, rgba(255, 255, 255, 0.32) 0px 2px 16px 0px;
@@ -94,5 +103,24 @@
                 transform: translateY(-100%);
             }
         }
+    }
+
+    &--primary {
+        width: 200px;
+        height: 54px;
+        padding-top: 13px;
+        margin-bottom: 13px;
+
+        background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
+    }
+
+    &--secondary {
+        width: 200px;
+        height: 54px;
+        padding-top: 13px;
+        margin-bottom: 13px;
+
+        box-shadow: 1px 8px 45px 0px rgba(0, 0, 0, 0.25);
+        background-color: #282c30;
     }
 }
