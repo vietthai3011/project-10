@@ -1,9 +1,6 @@
 @use "../abstracts";
 
 .header {
-    margin-top: 40px;
-    margin-bottom: 140px;
-
     @include abstracts.screen(xl) {
         margin-bottom: 100px;
     }
@@ -14,12 +11,29 @@
 }
 
 .top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    position: sticky;
+    top: -30px;
+    z-index: 1;
+
+    padding-top: 40px;
+
+    backdrop-filter: blur(50px);
 
     @include abstracts.screen(md) {
-        justify-content: initial;
+        background-color: #131517;
+        backdrop-filter: initial;
+
+        padding-bottom: 10px;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include abstracts.screen(md) {
+            justify-content: initial;
+        }
     }
 
     &__more {

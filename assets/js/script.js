@@ -34,3 +34,5 @@ function initJsToggle() {
 document.addEventListener("DOMContentLoaded", (event) => {
     initJsToggle();
 });
+
+console.log("1232   ");

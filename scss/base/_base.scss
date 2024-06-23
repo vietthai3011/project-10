@@ -18,10 +18,11 @@ html {
 }
 
 body {
+    height: 10000px;
     font-size: 1.6rem;
     font-family: "sora", sans-serif;
 
-    background: #131517;
+    background-color: #131517;
     color: #f9f9f9;
 }
 
@@ -37,6 +38,10 @@ mark {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+a {
+    color: inherit;
 }
 
 .heading-lv1 {

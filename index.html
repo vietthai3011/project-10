@@ -23,9 +23,9 @@
         <link rel="stylesheet" href="./assets/font/stylesheet.css" />
     </head>
     <body>
-        <header class="header">
+        <div class="top-bar">
             <div class="container">
-                <div class="top-bar">
+                <div class="top-bar__inner">
                     <div class="logo">
                         <img src="./assets/img/logo.svg" alt="" class="logo__img" />
                     </div>
@@ -35,23 +35,23 @@
                             <img src="./assets/icon/arrow-left.svg" alt="" />
                         </button>
                         <ul class="navbar__list">
-                            <li class="navbar__item">
-                                <a class="navbar__link" href="#!">
+                            <li class="navbar__item js-toggle" toggle-target="#navbar">
+                                <a class="navbar__link" href="#">
                                     <span class="navbar__link--hover">Home</span>
                                 </a>
                             </li>
-                            <li class="navbar__item">
-                                <a class="navbar__link" href="#!">
+                            <li class="navbar__item js-toggle" toggle-target="#navbar">
+                                <a class="navbar__link" href="#product">
                                     <span class="navbar__link--hover">Products</span>
                                 </a>
                             </li>
-                            <li class="navbar__item">
+                            <li class="navbar__item js-toggle" toggle-target="#navbar">
                                 <a class="navbar__link" href="#!">
                                     <span class="navbar__link--hover">Guidlines</span>
                                 </a>
                             </li>
-                            <li class="navbar__item">
-                                <a class="navbar__link" href="#!">
+                            <li class="navbar__item js-toggle" toggle-target="#navbar">
+                                <a class="navbar__link" href="#blog">
                                     <span class="navbar__link--hover">Review</span>
                                 </a>
                             </li>
@@ -74,7 +74,11 @@
                     <!-- *** Overlay -->
                     <div class="overlay js-toggle" toggle-target="#navbar"></div>
                 </div>
+            </div>
+        </div>
 
+        <header class="header">
+            <div class="container">
                 <!-- *** Hero -->
                 <div class="hero">
                     <div class="hero__content">
@@ -135,46 +139,142 @@
 
                         <div class="row row-cols-3 row-cols-lg-2 row-cols-md-1 gy-lg-4 gy-md-0">
                             <div class="col">
-                                <article class="service__item">
-                                    <div class="service-icon__wrap" style="--bgc-service-icon: #0cce84">
-                                        <img src="./assets/icon/report.svg" alt="" />
-                                    </div>
-                                    <h2 class="service__heading heading-lv3">Structured Reports</h2>
-                                    <p class="service__desc desc--primary">
-                                        Sed rhoncus sit sed tellus donec lorem lectus nunc, ornare
-                                    </p>
-                                </article>
+                                <a href="#!">
+                                    <article class="service__item">
+                                        <div class="service-icon__wrap" style="--bgc-service-icon: #0cce84">
+                                            <img src="./assets/icon/report.svg" alt="" />
+                                        </div>
+                                        <h2 class="service__heading heading-lv3">Structured Reports</h2>
+                                        <p class="service__desc desc--primary">
+                                            Sed rhoncus sit sed tellus donec lorem lectus nunc, ornare
+                                        </p>
+                                    </article>
+                                </a>
                             </div>
 
                             <div class="col separate-md d-none d-md-block"></div>
 
                             <div class="col">
-                                <div class="service__item">
-                                    <div class="service-icon__wrap" style="--bgc-service-icon: #ef8f00">
-                                        <img src="./assets/icon/clound.svg" alt="" />
-                                    </div>
-                                    <h2 class="service__heading heading-lv3">Cloud System</h2>
-                                    <p class="service__desc desc--primary">
-                                        Sed rhoncus sit sed tellus donec lorem lectus nunc, ornare
-                                    </p>
-                                </div>
+                                <a href="#!">
+                                    <article class="service__item">
+                                        <div class="service-icon__wrap" style="--bgc-service-icon: #ef8f00">
+                                            <img src="./assets/icon/clound.svg" alt="" />
+                                        </div>
+                                        <h2 class="service__heading heading-lv3">Cloud System</h2>
+                                        <p class="service__desc desc--primary">
+                                            Sed rhoncus sit sed tellus donec lorem lectus nunc, ornare
+                                        </p>
+                                    </article>
+                                </a>
                             </div>
 
                             <div class="col separate-md d-none d-md-block"></div>
 
                             <div class="col col-lg-12">
-                                <div class="service__item">
-                                    <div class="service-icon__wrap" style="--bgc-service-icon: #ae8ff9">
-                                        <img src="./assets/icon/support.svg" alt="" />
-                                    </div>
-                                    <h2 class="service__heading heading-lv3">24/7 Support</h2>
-                                    <p class="service__desc desc--primary">
-                                        Sed rhoncus sit sed tellus donec lorem lectus nunc, ornare
-                                    </p>
-                                </div>
+                                <a href="#!">
+                                    <article class="service__item">
+                                        <div class="service-icon__wrap" style="--bgc-service-icon: #ae8ff9">
+                                            <img src="./assets/icon/support.svg" alt="" />
+                                        </div>
+                                        <h2 class="service__heading heading-lv3">24/7 Support</h2>
+                                        <p class="service__desc desc--primary">
+                                            Sed rhoncus sit sed tellus donec lorem lectus nunc, ornare
+                                        </p>
+                                    </article>
+                                </a>
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section class="task">
+                <div class="container">
+                    <div class="row row-cols-2 row-cols-xl-1">
+                        <div class="task__left">
+                            <div class="task__top">
+                                <h2 class="task__heading heading-lv2">
+                                    Okay, <mark>Let’s</mark> see D’task in numbers
+                                </h2>
+                                <p class="task__desc desc--primary">
+                                    Powering a productive team means using a powerful tool (and plenty of
+                                    snacks). From meetings and projects to events and goal setting, D'taak
+                                    intuitive features give any team the ability to quickly set up and
+                                    customize workflows for just about anything
+                                </p>
+                            </div>
+                            <div class="task__botton">
+                                <div class="task__dot">
+                                    <img src="./assets/icon/dot.svg" alt="" />
+                                </div>
+                                <div class="task__wrap">
+                                    <div class="task__block">
+                                        <span class="task__Quantity">12M</span>
+                                        <p class="task__title">Support</p>
+                                    </div>
+
+                                    <div class="task__block">
+                                        <span class="task__Quantity">16</span>
+                                        <p class="task__title">Active User</p>
+                                    </div>
+
+                                    <div class="task__block">
+                                        <span class="task__Quantity">7/24</span>
+                                        <p class="task__title">Languages</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task__right">
+                            <div class="task__base">
+                                <img src="./assets/icon/task-base.svg" alt="" />
+                            </div>
+
+                            <div class="task__circle">
+                                <img src="./assets/icon/circle-large.svg" alt="" />
+                            </div>
+
+                            <div class="task__circle">
+                                <img src="./assets/icon/circle-small.svg" alt="" />
+                            </div>
+
+                            <div class="task__block--horizontal">
+                                <span class="task__mark">Online Support</span>
+                                <img class="task__icon" src="./assets/icon/play.svg" alt="" />
+                            </div>
+
+                            <div class="task__block--horizontal">
+                                <span class="task__mark">Exercitation</span>
+                                <img class="task__icon" src="./assets/icon/address.svg" alt="" />
+                            </div>
+
+                            <div class="task__block--horizontal">
+                                <div class="task__block--child">
+                                    <img class="task__icon" src="./assets/icon/address.svg" alt="" />
+                                    <span class="task__mark"><mark>D’ task</mark></span>
+                                </div>
+                                <div class="task__users">
+                                    <img class="task__user" src="./assets/img/user-1.jpg" alt="" />
+                                    <img class="task__user" src="./assets/img/user-2.jpg" alt="" />
+                                </div>
+                            </div>
+
+                            <div class="task__block--horizontal">
+                                <span class="task__mark"><mark>Design</mark></span>
+                                <img class="task__icon" src="./assets/icon/running.svg" alt="" />
+                            </div>
+
+                            <div class="task__circle">
+                                <img src="./assets/icon/circle-main.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="feature">
+                <div class="container">
+                    <div class="row row-cols-2"></div>
                 </div>
             </section>
         </main>

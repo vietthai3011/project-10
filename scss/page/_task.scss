@@ -1,0 +1,331 @@
+@use "../abstracts";
+
+.task {
+    margin-top: 100px;
+    padding-top: 75px;
+
+    &__left {
+        @include abstracts.screen(xl) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__top {
+        margin-bottom: 86px;
+    }
+
+    &__heading {
+        width: 368px;
+        margin-bottom: 22px;
+
+        @include abstracts.screen(xl) {
+            width: auto;
+        }
+    }
+
+    &__desc {
+        width: 537px;
+
+        @include abstracts.screen(xl) {
+            width: auto;
+        }
+    }
+
+    &__botton {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__dot {
+        align-self: center;
+        text-align: center;
+        margin-bottom: -16px;
+    }
+
+    &__wrap {
+        display: flex;
+        column-gap: 17px;
+
+        @include abstracts.screen(sm) {
+            column-gap: 0px;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 132px;
+        height: 127px;
+
+        border-radius: 9px;
+        background: #272633;
+
+        @include abstracts.screen(sm) {
+            width: 104px;
+            height: 98px;
+
+            &:nth-of-type(1) {
+                position: relative;
+                left: 9px;
+                z-index: -1;
+            }
+            &:nth-of-type(3) {
+                position: relative;
+                right: 9px;
+                z-index: -1;
+            }
+        }
+
+        &:nth-of-type(2) {
+            margin-top: 34px;
+            background: linear-gradient(
+                192deg,
+                #c4f566 -43.72%,
+                #ae8ef9 -5.87%,
+                #ef8f00 52.36%,
+                #61e559 122.78%
+            );
+
+            @include abstracts.screen(sm) {
+                width: 86.018px;
+                height: 83px;
+                flex-shrink: 0;
+            }
+
+            .task__title {
+                width: 61px;
+            }
+        }
+    }
+
+    &__Quantity {
+        display: block;
+        font-size: 3rem;
+        font-weight: 600;
+
+        margin-bottom: 16px;
+
+        @include abstracts.screen(sm) {
+            font-size: 2rem;
+            font-weight: 600;
+
+            margin-bottom: 10px;
+        }
+    }
+
+    &__title {
+        line-height: 2.6rem; /* 162.5% */
+        text-align: center;
+
+        @include abstracts.screen(sm) {
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+
+    &__right {
+        position: relative;
+
+        padding-top: 50%;
+
+        @include abstracts.screen(xl) {
+            margin-top: 150px;
+        }
+
+        @include abstracts.screen(md) {
+            margin-top: 100px;
+        }
+    }
+
+    &__base {
+        z-index: -1;
+    }
+
+    &__base,
+    &__circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+            @include abstracts.screen(xl) {
+                width: 100%;
+            }
+        }
+    }
+    &__circle {
+        &:nth-of-type(3) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                @include abstracts.screen(md) {
+                    width: calc(100% + 62px) !important;
+                }
+            }
+        }
+    }
+    &__block--horizontal {
+        position: absolute;
+        z-index: 9;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        column-gap: 40px;
+
+        padding: 10px 18px;
+
+        @include abstracts.screen(md) {
+            padding: 7px 9px;
+            column-gap: 22px;
+        }
+
+        &:nth-of-type(4) {
+            top: 52px;
+
+            padding: 15px 18px;
+            border-radius: 5px;
+            background: #27292c;
+
+            @include abstracts.screen(xl) {
+                top: 40px;
+                left: 192px;
+            }
+
+            @include abstracts.screen(lg) {
+                top: -10px;
+                left: 82px;
+            }
+
+            @include abstracts.screen(md) {
+                padding: 7px 9px;
+            }
+        }
+
+        &:nth-of-type(5) {
+            top: 50px;
+            right: 50px;
+
+            border-radius: 5px;
+            background: #27292c;
+
+            @include abstracts.screen(xl) {
+                top: 30px;
+                right: 239px;
+            }
+
+            @include abstracts.screen(lg) {
+                top: -26px;
+                right: 124px;
+            }
+
+            .task__mark {
+                background: linear-gradient(90deg, #0cce84 3.45%, #ae8ef9 99.07%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        &:nth-of-type(6) {
+            bottom: 170px;
+            left: -38px;
+
+            border-radius: 5px;
+            background: #27292c;
+
+            @include abstracts.screen(xl) {
+                bottom: 118px;
+                left: 160px;
+            }
+
+            @include abstracts.screen(lg) {
+                bottom: 50px;
+                left: 44px;
+            }
+
+            .task__block--child {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                column-gap: 15px;
+            }
+        }
+
+        &:nth-of-type(7) {
+            bottom: 90px;
+            right: 48px;
+
+            column-gap: 67px;
+
+            border-radius: 5px;
+            background: #27292c;
+
+            @include abstracts.screen(xl) {
+                bottom: 48px;
+                right: 229px;
+            }
+
+            @include abstracts.screen(lg) {
+                bottom: 0;
+                right: 119px;
+            }
+
+            @include abstracts.screen(md) {
+                column-gap: 35px;
+            }
+        }
+    }
+
+    &__mark {
+        font-size: 1.4rem;
+        font-weight: 600;
+
+        background: linear-gradient(90deg, #ef8f00 -6.27%, #ff7667 90.08%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @include abstracts.screen(md) {
+            font-size: 0.7rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+
+    &__icon {
+        @include abstracts.screen(md) {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &__user {
+        width: 32px;
+        height: 32px;
+
+        border-radius: 50%;
+        border: 1px solid #c531f9;
+
+        @include abstracts.screen(md) {
+            width: 16px;
+            height: 16px;
+        }
+
+        &:first-of-type {
+            margin-right: -11px;
+        }
+    }
+}
